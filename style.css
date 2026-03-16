@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square-div {
+    width: 320px;
+    aspect-ratio: 1;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: 20px;
+    aspect-ratio: 1;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
