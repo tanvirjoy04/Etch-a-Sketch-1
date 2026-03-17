@@ -2,6 +2,7 @@ const container = document.querySelector(".container");
 const squareDiv = document.querySelector(".square-div")
 let line = 16
 
+
 let itemWidth = `${100 / line}%`
 let grid = line ** 2;
 let fragment = document.createDocumentFragment()
