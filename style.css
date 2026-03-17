@@ -1,21 +1,27 @@
+
+.hero {
+    text-align: center;
+    margin: 0px;
+}
+
 .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 4px;
 }
 
 .square-div {
-    width: 320px;
-    aspect-ratio: 1;
+    flex: 0 0 640px;
     border: 1px solid black;
+    aspect-ratio: 1;
     display: flex;
     flex-wrap: wrap;
 }
 
 .item {
-    width: 20px;
     aspect-ratio: 1;
-    box-sizing: border-box;
     border: 1px solid black;
+    box-sizing: border-box;
 }
 
