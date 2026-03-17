@@ -1,28 +1,25 @@
-
-.hero {
-    text-align: center;
-    margin: 0px;
+body {
+    height: 100vh;
 }
 
 .container {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 4px;
-    flex-flow: column wrap;
+    justify-content: center;
 }
 
-.square-div {
-    /* flex: 0 0 640px; */
-    border: 1px solid black;
+.grid-square {
+    /* border: 1px solid black; */
+    flex: 0 0 640px;
     aspect-ratio: 1;
     display: flex;
     flex-wrap: wrap;
 }
 
-.item {
-    aspect-ratio: 1;
+.square-div {
     border: 1px solid black;
+    flex: 0 0 6.25%;
+    aspect-ratio: 1;
     box-sizing: border-box;
+    
+    
 }
-
