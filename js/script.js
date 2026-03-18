@@ -22,7 +22,8 @@ function createNewDiv (line) {
     let items = document.querySelectorAll(".square-div");
     items.forEach((item) => {
     item.addEventListener("mouseenter", () => {
-        item.classList.add("hover")
+        // item.classList.add("hover")
+        item.style.backgroundColor = randomColor()
     })
 })
 
@@ -55,3 +56,12 @@ gridBtn.addEventListener("click",  () => {
     
 })
 
+// create random rgb color
+function randomColor () {
+    let r = Math.floor(Math.random() * 255);
+    let g = Math.floor(Math.random() * 255);
+    let b = Math.floor(Math.random() * 255);
+    
+    let RGB = `rgb(${r}, ${g}, ${b})`
+    return RGB
+}
