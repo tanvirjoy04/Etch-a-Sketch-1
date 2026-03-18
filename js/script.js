@@ -30,11 +30,6 @@ function createNewDiv (line) {
 
 createNewDiv(lineInit);
 
-
-
-
-
-
 // button for removing all exiting div and create new one
 
 function removeAll (items) {
@@ -59,3 +54,4 @@ gridBtn.addEventListener("click",  () => {
     createNewDiv(newLine)
     
 })
+
