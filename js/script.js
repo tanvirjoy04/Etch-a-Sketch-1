@@ -20,15 +20,12 @@ function createNewDiv (line) {
 
     // add event listner to all Square-div
     let items = document.querySelectorAll(".square-div");
-    items.forEach((item => item.style.alpha = ""))
+    items.forEach((item => item.style.alpha = 0.1))
     items.forEach((item) => {
     item.addEventListener("mouseenter", () => {
-        // let op = item.style.opacity
-        // item.style.opacity = incraseOpacity(op)
         let alpha = item.style.alpha
         item.style.alpha = incraseOpacity(alpha)
         item.style.backgroundColor = randomColor(alpha)
-        console.log(item.style.alpha)
     })
 })
 
@@ -71,7 +68,7 @@ function randomColor (alpha) {
     return RGB
 }
 
-// incrase opacity
+// incrase alpha
 
 function incraseOpacity(opacity) {
     if (opacity >= 1) return opacity
