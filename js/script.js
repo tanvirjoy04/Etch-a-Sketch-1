@@ -20,11 +20,15 @@ function createNewDiv (line) {
 
     // add event listner to all Square-div
     let items = document.querySelectorAll(".square-div");
+    items.forEach((item => item.style.alpha = ""))
     items.forEach((item) => {
     item.addEventListener("mouseenter", () => {
-        let op = item.style.opacity
-        item.style.opacity = incraseOpacity(op)
-        item.style.backgroundColor = randomColor()
+        // let op = item.style.opacity
+        // item.style.opacity = incraseOpacity(op)
+        let alpha = item.style.alpha
+        item.style.alpha = incraseOpacity(alpha)
+        item.style.backgroundColor = randomColor(alpha)
+        console.log(item.style.alpha)
     })
 })
 
@@ -58,11 +62,12 @@ gridBtn.addEventListener("click",  () => {
 })
 
 // create random rgb color
-function randomColor () {
+function randomColor (alpha) {
     let r = Math.floor(Math.random() * 255);
     let g = Math.floor(Math.random() * 255);
     let b = Math.floor(Math.random() * 255);
-    let RGB = `rgb(${r}, ${g}, ${b})`
+    let a = alpha
+    let RGB = `rgb(${r}, ${g}, ${b}, ${a})`
     return RGB
 }
 
