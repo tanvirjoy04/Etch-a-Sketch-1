@@ -7,6 +7,7 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    gap: 8px;
 }
 
 .grid-square {
@@ -29,4 +30,19 @@ body {
 
 .hover {
     background-color: aquamarine;
+}
+
+#grid-button {
+    width: 160px;
+    border-radius: 4px;
+}
+
+.hero {
+    margin: 0;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    width: 640px;
 }
