@@ -1,22 +1,32 @@
-const gridSquare = document.querySelector(".grid-square")
-const lineInit = 16
+const gridSquare = document.querySelector(".grid-square");
+const lineInit = 16;
 
 function calcWidthPrecent (line) {
-    widthPrecentage = 100 / line
-    return `${widthPrecentage}%`
+    widthPrecentage = 100 / line;
+    return `${widthPrecentage}%`;
 }
 
 function createNewDiv (line) {
-    let grid = line ** 2
-    let fragment = document.createDocumentFragment()
+    let grid = line ** 2;
+    let fragment = document.createDocumentFragment();
     for (let i = 0; i < grid; i++) {
-        const newDiv = document.createElement("div")
-        newDiv.classList.add("square-div")
-        newDiv.style.flexBasis = calcWidthPrecent(line)
-        fragment.appendChild(newDiv)
+        const newDiv = document.createElement("div");
+        newDiv.classList.add("square-div");
+        newDiv.style.flexBasis = calcWidthPrecent(line);
+        fragment.appendChild(newDiv);
     }
 
-    gridSquare.appendChild(fragment)
+    gridSquare.appendChild(fragment);
 }
 
-createNewDiv(lineInit)
+createNewDiv(lineInit);
+
+// add event listner to all Square-div
+
+let items = document.querySelectorAll(".square-div");
+items.forEach((item) => {
+    item.addEventListener("mouseenter", () => {
+        item.classList.add("hover")
+    })
+})
+
