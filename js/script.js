@@ -22,7 +22,6 @@ function createNewDiv (line) {
     let items = document.querySelectorAll(".square-div");
     items.forEach((item) => {
     item.addEventListener("mouseenter", () => {
-        // item.classList.add("hover")
         let op = item.style.opacity
         item.style.opacity = incraseOpacity(op)
         item.style.backgroundColor = randomColor()
@@ -74,3 +73,4 @@ function incraseOpacity(opacity) {
     incrased = Number(opacity) + 0.1
     return incrased.toFixed(1)
 }
+
