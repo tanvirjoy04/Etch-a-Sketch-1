@@ -23,6 +23,8 @@ function createNewDiv (line) {
     items.forEach((item) => {
     item.addEventListener("mouseenter", () => {
         // item.classList.add("hover")
+        let op = item.style.opacity
+        item.style.opacity = incraseOpacity(op)
         item.style.backgroundColor = randomColor()
     })
 })
@@ -61,7 +63,14 @@ function randomColor () {
     let r = Math.floor(Math.random() * 255);
     let g = Math.floor(Math.random() * 255);
     let b = Math.floor(Math.random() * 255);
-    
     let RGB = `rgb(${r}, ${g}, ${b})`
     return RGB
+}
+
+// incrase opacity
+
+function incraseOpacity(opacity) {
+    if (opacity >= 1) return opacity
+    incrased = Number(opacity) + 0.1
+    return incrased.toFixed(1)
 }
