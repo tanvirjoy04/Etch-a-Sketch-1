@@ -50,7 +50,6 @@ gridBtn.addEventListener("click",  () => {
         return alert("Please input valid number")
     }
 
-    let numLine = Number(newLine)
     let items = document.querySelectorAll(".square-div")
     removeAll(items);
     createNewDiv(newLine)
