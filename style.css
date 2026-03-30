@@ -29,10 +29,6 @@ body {
     
 }
 
-.hover {
-    background-color: aquamarine;
-}
-
 #grid-button {
     width: 160px;
     border-radius: 4px;
