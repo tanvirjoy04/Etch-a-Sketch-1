@@ -1,9 +1,9 @@
 const gridSquare = document.querySelector(".grid-square");
 const lineInit = 16;
 
-function calcWidthPrecent (line) {
-    widthPrecentage = 100 / line;
-    return `${widthPrecentage}%`;
+function calcWidthPercent (line) {
+    widthPercentage = 100 / line;
+    return `${widthPercentage}%`;
 }
 
 function createNewDiv (line) {
@@ -22,9 +22,9 @@ function createNewDiv (line) {
     let items = document.querySelectorAll(".square-div");
     items.forEach((item) => {
     item.addEventListener("mouseenter", () => {
-        let op = item.style.opacity
-        item.style.opacity = incraseOpacity(op)
-        item.style.backgroundColor = randomColor()
+        let op = item.style.opacity;
+        item.style.opacity = increaseOpacity(op);
+        item.style.backgroundColor = randomColor();
     })
 })
 
@@ -36,24 +36,22 @@ createNewDiv(lineInit);
 
 function removeAll (items) {
     for (let item of items) {
-        item.remove()
+        item.remove();
     }
 }
 
-const gridBtn = document.querySelector("#grid-button")
+const gridBtn = document.querySelector("#grid-button");
 
 gridBtn.addEventListener("click",  () => {
-    let newLine = prompt("Inser number beetween 1-100")
-    console.log(newLine)
-    console.log(typeof(newLine))
+    let newLine = prompt("Insert number beetween 1-100");
     if (newLine > 100 || newLine < 0 || !Number(newLine)) {
-        return alert("Please input valid number")
+        return alert("Please input valid number");
     }
 
-    let numLine = Number(newLine)
-    let items = document.querySelectorAll(".square-div")
+    let numLine = Number(newLine);
+    let items = document.querySelectorAll(".square-div");
     removeAll(items);
-    createNewDiv(newLine)
+    createNewDiv(newLine);
     
 })
 
@@ -62,15 +60,15 @@ function randomColor () {
     let r = Math.floor(Math.random() * 255);
     let g = Math.floor(Math.random() * 255);
     let b = Math.floor(Math.random() * 255);
-    let RGB = `rgb(${r}, ${g}, ${b})`
-    return RGB
+    let RGB = `rgb(${r}, ${g}, ${b})`;
+    return RGB;
 }
 
 // incrase opacity
 
-function incraseOpacity(opacity) {
-    if (opacity >= 1) return opacity
-    incrased = Number(opacity) + 0.1
-    return incrased.toFixed(1)
+function increaseOpacity(opacity) {
+    if (opacity >= 1) return opacity;
+    increased = Number(opacity) + 0.1;
+    return increased.toFixed(1);
 }
 
